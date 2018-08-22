@@ -11,8 +11,7 @@ export class Main extends React.Component {
     }
 
     componentDidMount() {
-        const playerId = nba.findPlayer("Chris Paul").playerId;
-        nba.stats.playerInfo({PlayerID: playerId}).then((response) => {
+        nba.stats.playerInfo({PlayerID: this.state.playerId}).then((response) => {
             const playerInfo = {...response.commonPlayerInfo[0], ...response.playerHeadlineStats[0]};
             this.setState({
                 playerInfo
@@ -24,7 +23,7 @@ export class Main extends React.Component {
         console.log(this.state.playerInfo);
         return (
             <div className="main">
-                <Profile/>
+                <Profile playerInfo={this.state.playerInfo}/>
                 <ShotChart playerId={this.state.playerId}/>
             </div>
         );
