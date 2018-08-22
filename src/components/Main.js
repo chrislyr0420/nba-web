@@ -13,8 +13,7 @@ export class Main extends React.Component {
     componentDidMount() {
         const playerId = nba.findPlayer("Chris Paul").playerId;
         nba.stats.playerInfo({PlayerID: playerId}).then((response) => {
-            const playerInfo = Object.assign({}, response.commonPlayerInfo[0], response.playerHeadlineStats[0]
-            );
+            const playerInfo = {...response.commonPlayerInfo[0], ...response.playerHeadlineStats[0]};
             this.setState({
                 playerInfo
             });
