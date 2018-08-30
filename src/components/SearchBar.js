@@ -10,7 +10,7 @@ export class SearchBar extends React.Component {
     }
 
     onSelect = (value) => {
-        console.log();
+        this.props.loadPlayerInfo(value);
     }
 
     handleSearch = (value) => {
