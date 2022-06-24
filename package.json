@@ -7,7 +7,7 @@
     "d3-shotchart": "0.0.2",
     "lodash": "^4.17.20",
     "nba": "^4.13.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.3"
